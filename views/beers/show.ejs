@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+<main>
+    <h1><%= beer.name %></h1>
+    <p><%= beer.location %></p>
+    <form method="POST" action="/beers/<%= beer._id %>?_method=DELETE">
+        <button class="delete" type="submit">Delete Bar</button>
+    </form>
+    <hr />
+    <h3>Bars:</h3>
+    <% beer.bars.forEach(function(bar) { %>
+        <p><%= bar.name %></p>
+    <% }); %>
+        
+    <h3>Add a Comment</h3>
+    <form method="POST" action="/beers/<%= beer._id %>/comments">
+        <input type="text" name="content" placeholder="Enter the comment">
+        <br>
+        <br>
+        <input type="submit" value="Add Comment">
+        <h4>Comments:</h4>
+        <% beer.comments.forEach(comment => { %>
+            <p><%= comment.createdAt.toDateString() %></p>
+            <p><%= comment.content %></p>        
+        <% }) %>
+    </form>
+</main>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<main>
+    <h1>All Bars</h1>
+    <a href="/bars/new"><button>Add a New Bar</button></a>
+    <% bars.forEach(function(bar) { %>
+        <h2><a href="/bars/<%= bar._id %>"><%= bar.name %></a></h2>
+        <hr />
+    <% }); %>
+</main>
+
+<%- include('../partials/footer') %>
