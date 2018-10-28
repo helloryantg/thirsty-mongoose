@@ -1,12 +1,15 @@
 <%- include('../partials/header') %>
-
-<main>
-    <h1>All Bars</h1>
-    <a href="/bars/new"><button>Add a New Bar</button></a>
-    <% bars.forEach(function(bar) { %>
-        <h2><a href="/bars/<%= bar._id %>"><%= bar.name %></a></h2>
-        <hr />
-    <% }); %>
-</main>
+<div class="bars-page">
+    <main>
+        <h1>All Bars</h1>
+        <br>
+        <a href="/bars/new"><button>ADD A NEW BAR</button></a>
+        <% bars.forEach(function(bar) { %>
+            <div class="b-container">
+                <h2><a href="/bars/<%= bar._id %>"><%= bar.name %></a></h2>
+            </div>
+        <% }); %>
+    </main>
+</div>
 
 <%- include('../partials/footer') %>

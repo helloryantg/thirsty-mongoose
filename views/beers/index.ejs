@@ -1,12 +1,16 @@
 <%- include('../partials/header') %>
 
-<main>
-    <h1>All Beers</h1>
-    <a href="/beers/new"><button>Add a New Beer</button></a>
-    <% beers.forEach(function(beer) { %>
-        <h2><a href="/beers/<%= beer._id %>"><%= beer.name %></a></h2>
-        <hr />
-    <% }); %>
-</main>
+<div class="beers-page">
+    <main>
+        <h1>All Beers</h1>
+        <br><br>
+        <a href="/beers/new"><button>Add a New Beer</button></a>
+        <% beers.forEach(function(beer) { %>
+            <div class="b-container">
+                <h2><a href="/beers/<%= beer._id %>"><%= beer.name %></a></h2>
+            </div>
+        <% }); %>
+    </main>
+</div>
 
 <%- include('../partials/footer') %>

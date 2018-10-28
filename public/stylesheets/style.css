@@ -1,8 +1,157 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header, footer {
+  background-color: black;
+}
+
+nav, footer {
+  height: 80px;
+  width: 100%;
+  display: flex;
+}
+
+footer {
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
-  color: #00B7FF;
+  color: white;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+main {
+  margin: 0 40px;
+  padding-top: 40px;
+  height: 95vh;
+}
+
+.welcome-page {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55), 
+    rgba(0, 0, 0, 0.55)
+    ), 
+    url("../images/christin-hume-370431-unsplash.jpg");
+  height: 95vh;
+  background-size: cover;
+}
+
+h1, h3 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+.bars-page {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55),  
+    rgba(0, 0, 0, 0.55)
+    ), 
+    url("../images/bars.jpg");
+  height: 95vh;
+  background-size: cover; 
+}
+
+.b-container {
+  height: 100px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.button, button {
+  border-radius: 6px;
+  background-color: #DB4D33;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 16px;
+  font-size: 110%;
+}
+
+.button:hover, button:hover {
+  background-color: red;
+}
+
+input[type=text] {
+  height: 40px;
+  width: 240px;
+}
+
+.beers-page {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55),  
+    rgba(0, 0, 0, 0.55)
+    ), 
+    url("../images/beers.jpg");
+  height: 95vh;
+  background-size: cover; 
+}
+
+.bars-show {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55),  
+    rgba(0, 0, 0, 0.55)
+    ), 
+    url("../images/bars-show.jpg");
+  height: 95vh;
+  background-size: cover; 
+}
+
+.beers {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.show-beer-page {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55),  
+    rgba(0, 0, 0, 0.55)
+    ), 
+    url("../images/one-beer.jpg");
+  height: 95vh;
+  background-size: cover; 
+  background-position: center;
+}
+
+.bars-new-page {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55),  
+    rgba(0, 0, 0, 0.55)
+    ), 
+    url("../images/bars-new.jpg");
+  height: 95vh;
+  background-size: cover; 
+  background-position: center;
+}
+
+.beer-comments {
+  background-color: rgba(0,0,0,.3);
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
 }

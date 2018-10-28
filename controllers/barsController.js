@@ -16,10 +16,11 @@ module.exports = {
     create: function(req, res, next) {
         let data = req.body;
         Bar.create({
-            name: data.name
+            name: data.name,
+            location: data.location
         }, function(err) {
             if (err) return next(err);
-            res.redirect('/bars/');
+            res.redirect('/bars');
         });
     },
 
