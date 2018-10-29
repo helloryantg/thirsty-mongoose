@@ -31,12 +31,7 @@ nav a {
 
 a {
   color: white;
-  opacity: 0.6;
   text-decoration: none;
-}
-
-a:hover {
-  opacity: 1;
 }
 
 main {
@@ -89,6 +84,12 @@ p {
   font-weight: 700;
   padding: 16px;
   font-size: 110%;
+  margin-right: 20px;
+}
+
+.sm-btn {
+  font-size: 80%;
+  padding: 8px 12px;
 }
 
 .button:hover, button:hover {
@@ -122,7 +123,8 @@ input[type=text] {
 
 .beers {
   display: flex;
-  width: 300px;
+  width: 400px;
+  height: 80px;
   justify-content: space-between;
   margin: 20px 0;
 }
@@ -154,4 +156,18 @@ input[type=text] {
   padding: 20px;
   border-radius: 8px;
   width: 200px;
+}
+
+.beer-ctn {
+  width: 240px;
+}
+
+.beers-new-page {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55),  
+    rgba(0, 0, 0, 0.55)
+    ), 
+    url("../images/mongoose.jpg");
+  height: 95vh;
+  background-size: cover; 
 }

@@ -5,14 +5,16 @@
         <h1><%= bar.name %></h1>
         <p><%= bar.location %></p>
         <form method="POST" action="/bars/<%= bar._id %>?_method=DELETE">
-            <button class="delete" type="submit">DELETE BAR</button>
+            <button class="delete sm-btn" type="submit">DELETE BAR</button>
         </form>
         <h3>Beers:</h3>
             <% bar.beers.forEach(function(beer) { %>
                 <div class="beers">
-                    <h3><%= beer.name %></h3>
+                    <div class="beer-ctn">
+                        <h3><%= beer.name %></h3>
+                    </div>
                     <form action="/bars/<%= bar._id %>/beers/<%= beer._id %>?_method=DELETE" method="post">
-                        <button type="submit">Stop Serving</button>
+                        <button class="sm-btn" type="submit">Stop Serving</button>
                     </form>
                 </div>
             <% }); %>
@@ -26,7 +28,7 @@
                 </select>
                 <br>
                 <br>
-                <input class="button" type="submit" value="Add Beer">
+                <input class="button" type="submit" value="ADD BEER">
             </form>
         </div>
     </main>

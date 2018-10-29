@@ -1,14 +1,16 @@
 <%- include('../partials/header') %>
 
-<main>
-    <h2>Add a new Beer</h2>
-    <form method="POST" action="/beers">
-        <input type="text" name="name" placeholder="Beer name">
-        <br><br>
-        <input type="text" name="style" placeholder="Beer style">
-        <br><br>
-        <input class="button" type="submit" value="Add Beer">
-    </form>
-</main>
+<div class="beers-new-page">
+    <main>
+        <h1>Add a new Beer</h1>
+        <form method="POST" action="/beers">
+            <input type="text" name="name" placeholder="Beer name">
+            <br><br>
+            <input type="text" name="style" placeholder="Beer style">
+            <br><br>
+            <input class="button" type="submit" value="Add Beer">
+        </form>
+    </main>
+</div>
 
 <%- include('../partials/footer') %>

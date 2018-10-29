@@ -14,13 +14,10 @@ module.exports = {
     },
 
     create: function(req, res, next) {
-        let data = req.body;
-        Bar.create({
-            name: data.name,
-            location: data.location
-        }, function(err) {
+        var newBar = new Bar(req.body);
+        newBar.save(function(err) {
             if (err) return next(err);
-            res.redirect('/bars');
+            res.redirect('/bars/' + newBar._id);
         });
     },
 

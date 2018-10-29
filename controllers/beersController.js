@@ -14,12 +14,10 @@ module.exports = {
     },
 
     create: function(req, res, next) {
-        let data = req.body;
-        Beer.create({
-            name: data.name
-        }, function(err) {
+        var newBeer = new Beer(req.body);
+        newBeer.save(function(err) {
             if (err) return next(err);
-            res.redirect('/beers');
+            res.redirect('/beers/' + newBeer._id);
         });
     },
 
